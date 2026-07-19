@@ -1,0 +1,7 @@
+{
+  "name": "sample-api",
+  "version": "0.1.0",
+  "main": "app.js",
+  "scripts": { "start": "node app.js" },
+  "dependencies": { "express": "^4.18.2", "dd-trace": "^1.10.0" }
+}

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <style>
+    .box { fill:#f7f9fc; stroke:#3b82f6; stroke-width:2; rx:8; }
+    .title { font: bold 14px sans-serif; fill:#0f172a }
+    .label { font: 12px sans-serif; fill:#0f172a }
+    .arrow { stroke:#64748b; stroke-width:2; fill:none; marker-end:url(#arrowhead);} 
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- VPC -->
+  <rect x="10" y="10" width="880" height="400" fill="none" stroke="#94a3b8" stroke-dasharray="4 4" rx="12" />
+  <text x="24" y="32" class="label">VPC (3 AZs)</text>
+
+  <!-- Internet -->
+  <rect class="box" x="40" y="60" width="160" height="60" rx="8" />
+  <text class="title" x="60" y="85">Internet / Users</text>
+
+  <!-- ALB -->
+  <rect class="box" x="240" y="50" width="180" height="80" rx="8" />
+  <text class="title" x="280" y="78">ALB (Public)</text>
+  <text class="label" x="280" y="98">Listener: 80</text>
+
+  <!-- ECS Cluster -->
+  <rect class="box" x="460" y="40" width="360" height="140" rx="8" />
+  <text class="title" x="500" y="62">ECS Fargate Cluster</text>
+  <rect x="480" y="80" width="140" height="60" class="box"/>
+  <text class="label" x="495" y="105">Task: App</text>
+  <text class="label" x="495" y="122">Port 8080</text>
+  <rect x="640" y="80" width="140" height="60" class="box"/>
+  <text class="label" x="655" y="105">Datadog Agent</text>
+
+  <!-- RDS -->
+  <rect class="box" x="240" y="180" width="260" height="100" rx="8" />
+  <text class="title" x="260" y="200">RDS (Private)</text>
+  <text class="label" x="260" y="222">Postgres, Multi-AZ</text>
+
+  <!-- ECR & CI -->
+  <rect class="box" x="40" y="160" width="160" height="80" rx="8" />
+  <text class="title" x="60" y="185">ECR</text>
+  <text class="label" x="60" y="205">Docker images</text>
+
+  <!-- Datadog -->
+  <rect class="box" x="40" y="270" width="180" height="100" rx="8" />
+  <text class="title" x="60" y="295">Datadog</text>
+  <text class="label" x="60" y="315">Metrics, APM, Dashboards</text>
+
+  <!-- CloudWatch & SNS -->
+  <rect class="box" x="240" y="300" width="200" height="70" rx="8" />
+  <text class="title" x="260" y="325">CloudWatch & SNS</text>
+  <text class="label" x="260" y="345">Alarms -> SNS notifications</text>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M200 90 L240 90" />
+  <path class="arrow" d="M420 90 L460 90" />
+  <path class="arrow" d="M560 140 L560 180" />
+  <path class="arrow" d="M460 220 L420 220" />
+  <path class="arrow" d="M200 200 L240 200" />
+  <path class="arrow" d="M340 320 L420 320" />
+
+  <!-- Labels on arrows -->
+  <text class="label" x="210" y="78">HTTP</text>
+  <text class="label" x="370" y="110">Targets</text>
+
+</svg>

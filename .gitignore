@@ -1,0 +1,8 @@
+/.terraform/
+/.terraform.lock.hcl
+.env
+*.tfstate
+*.tfstate.backup
+/.venv/
+node_modules/
+dist/

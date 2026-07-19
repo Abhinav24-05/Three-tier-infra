@@ -1,0 +1,9 @@
+variable "name" { type = string }
+variable "vpc_id" { type = string }
+variable "private_subnet_ids" { type = list(string) }
+variable "public_subnet_ids" { type = list(string) }
+variable "app_image" { type = string }
+variable "datadog_api_key" { type = string }
+variable "lb_target_group_arn" { type = string }
+variable "alb_security_group_id" { type = string }
+variable "aws_region" { type = string }
